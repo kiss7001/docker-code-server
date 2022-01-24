@@ -8,5 +8,4 @@ docker build --tag="wykim:code-server-v1" github.com/kiss7001/docker-code-server
 
 docker run -d -e VIRTUAL_HOST=code-v002.wykim-ares.com --expose 8080 --name code-v002_wykim-ares_com wykim:code-server-v1
 
-apt install curl -y
-curl -fsSL https://code-server.dev/install.sh | sh
+docker exec -it code-v002_wykim-ares_com /bin/bash

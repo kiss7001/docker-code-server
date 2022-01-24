@@ -17,7 +17,7 @@ COPY config.yaml /root/.config/code-server
 WORKDIR /
 
 # Define default command.
-CMD ["code-server &"]
+# CMD ["code-server &"]
 
 # Expose ports.
 EXPOSE 8080

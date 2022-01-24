@@ -11,6 +11,8 @@ RUN apt-get install -y vim curl
 # 코드서버 설치
 RUN curl -fsSL https://code-server.dev/install.sh | sh
 
+COPY config.yaml /root/.config/code-server
+
 # Define working directory.
 WORKDIR /
 

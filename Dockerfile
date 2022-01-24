@@ -14,10 +14,10 @@ RUN curl -fsSL https://code-server.dev/install.sh | sh
 COPY config.yaml /root/.config/code-server/config.yaml
 
 # Define working directory.
-WORKDIR /
+WORKDIR /usr/bin
 
 # Define default command.
-# CMD ["code-server &"]
+CMD ["code-server"]
 
 # Expose ports.
 EXPOSE 8080

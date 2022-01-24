@@ -11,13 +11,13 @@ RUN apt-get install -y vim curl
 # 코드서버 설치
 RUN curl -fsSL https://code-server.dev/install.sh | sh
 
-#COPY config.yaml /root/.config/code-server
+COPY config.yaml /root/.config/code-server
 
 # Define working directory.
 WORKDIR /
 
 # Define default command.
-CMD ["code-server"]
+CMD ["code-server &"]
 
 # Expose ports.
 EXPOSE 8080
